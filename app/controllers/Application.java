@@ -43,8 +43,8 @@ public class Application extends Controller {
                 return F.Promise.pure(redirect(url));
             } else {
                 return force.getToken(code, oauthCallbackUrl(request())).flatMap(authInfo ->
-                        force.getAccounts(authInfo).<Result>map(accounts ->
-                                ok(index.render(accounts))
+                        force.getEvenLogFiles(authInfo).<Result>map(evenlogfile ->
+                                ok(index.render(evenlogfiles))
                         )
                 ).recover(error -> {
                     if (error instanceof Force.AuthException)
