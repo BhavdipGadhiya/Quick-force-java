@@ -7,18 +7,12 @@
     <table class="table">
         <tr>
             <th>Id</th>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Industry</th>
-            <th>Rating</th>
+            <th>evenlogfile</th>            
         </tr>
-        @accounts.map { account =>
+        @evenlogfiles.map {evenlogfile =>
             <tr>
-                <td>@account.Id</td>
-                <td>@account.Name</td>
-                <td>@account.Type</td>
-                <td>@account.Industry</td>
-                <td>@account.Rating</td>
+                <td>@evenlogfile.Id</td>
+                <td>@evenlogfile.evenlogfile</td>             
             </tr>
         }
     </table>
